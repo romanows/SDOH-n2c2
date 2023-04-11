@@ -1,0 +1,30 @@
+# ignore everything by default
+*
+
+# but not subdirectories
+!*/
+
+# but do ignore hidden/dot-directories
+.*/
+
+# allowlist the filetypes we expect to commit in this kind of a project
+!*.py
+!*.sh
+!*.md
+!.gitignore
+!.ignore
+!.gitlab-ci.yml
+!requirements.txt
+!LICENSE.txt
+!pylintrc
+
+# scripts/ directory is a special case, since we sometimes want to have
+# extensionless executable scripts that acting like command-line tools
+!scripts/*
+scripts/*.*
+!scripts/*.py
+!scripts/*.sh
+!scripts/*.md
+
+# ignore this directory created by pip-installing this directory
+*.egg-info/
